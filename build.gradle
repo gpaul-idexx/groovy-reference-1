@@ -50,6 +50,7 @@ dependencies {
     testCompile 'org.spockframework:spock-spring:1.0-groovy-2.4'
     testCompile 'info.cukes:cucumber-groovy:1.2.4'
     testCompile 'info.cukes:cucumber-junit:1.2.4'
+    testCompile 'org.springframework:spring-test'
 }
 
 dependencyManagement {
