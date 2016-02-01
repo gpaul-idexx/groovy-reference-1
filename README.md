@@ -10,6 +10,5 @@ Explore and provide examples of technologies including:
 * Spring Actuator
 * Spring Actuator Docs
 * Spring Cloud AWS
-    * EC2 metadata
-    
+    * EC2 metadata   
 
