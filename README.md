@@ -7,7 +7,6 @@ Explore and provide examples of technologies including:
 * Cucumber
 * Spring Boot
 * Spring Data REST
-* Spring REST Docs
 * Spring Actuator
 * Spring Actuator Docs
 * Spring Cloud AWS
