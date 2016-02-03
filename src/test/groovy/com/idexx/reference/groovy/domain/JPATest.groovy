@@ -37,4 +37,15 @@ class JPATest extends Specification {
         dbDave.pets[0].name == "Fluffy"
     }
 
+    def "it can retrieve all pet owners from the db"() {
+        given:
+        repository.deleteAll()
+        def dave = new PetOwner(name: "Dave")
+        repository.save(dave)
+        when:
+        def owners = repository.findAll()
+        then:
+        owners[0].name == dave.name
+    }
+
 }
