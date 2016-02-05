@@ -7,8 +7,8 @@ Explore and provide examples of technologies including:
 * Cucumber
 * Spring Boot
 * Spring Data REST
+* Spring Actuator Docs - available at http://localhost:8080/docs/
 * Spring Actuator
-* Spring Actuator Docs
 * Spring Cloud AWS
     * EC2 metadata   
 
