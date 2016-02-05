@@ -70,5 +70,9 @@ task wrapper(type: Wrapper) {
 }
 
 cucumber {
-    formats = ['pretty', "junit:${testResultsDir}/cucumber.xml".toString()]
+    formats = [
+            'pretty',
+            "junit:${testResultsDir}/cucumber.xml".toString(),
+            "html:${testReportDir}/cucumber".toString()
+    ]
 }
