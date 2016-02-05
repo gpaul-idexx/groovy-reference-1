@@ -68,3 +68,7 @@ dependencyManagement {
 task wrapper(type: Wrapper) {
     gradleVersion = '2.9'
 }
+
+cucumber {
+    formats = ['pretty', "junit:${testResultsDir}/cucumber.xml".toString()]
+}
