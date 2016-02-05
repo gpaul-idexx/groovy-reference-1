@@ -16,7 +16,13 @@ plugins {
 
 apply plugin: 'groovy'
 apply plugin: 'spring-boot'
+apply plugin: 'idea'
 
+idea {
+    module {
+        testSourceDirs += file('src/cucumber/groovy')
+    }
+}
 
 jar {
     baseName = 'groovy-reference'
