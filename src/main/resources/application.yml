@@ -1,3 +1,6 @@
+info:
+  flag: yep 1
+
 # with no profile e.g. local dev, we're not on ec2, so we can't look up the region
 ---
 spring:
