@@ -3,6 +3,7 @@ package com.idexx.reference.groovy
 import com.idexx.reference.groovy.domain.PetOwner
 import com.idexx.reference.groovy.domain.repository.PetOwnerRepository
 import org.springframework.boot.SpringApplication
+import org.springframework.boot.actuate.endpoint.AbstractEndpoint
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.annotation.Bean
 
@@ -23,5 +24,31 @@ class GroovyReference1Application {
         ])
 
         "yep"
+    }
+
+    class AwsInfo extends AbstractEndpoint<Map<String, Object>> {
+
+        private def keys = ['ami-id', 'hostname', 'iam/info', 'instance-id', 'instance-type', 'local-hostname',
+                            'local-ipv4', 'placement/availability-zone', 'public-hostname', 'public-ipv4',
+                            'reservation-id', 'security-groups', 'instance-identity/document']
+
+        Map<String, Object> info = [:]
+
+        AwsInfo() {
+            super('aws-info', true)
+        }
+
+        @Override
+        Map<String, Object> invoke() {
+            keys.each { key ->
+                info[key] = environment.getProperty(key, "N/A")
+            }
+            return info
+        }
+    }
+
+    @Bean
+    AwsInfo awsInstanceInfo() {
+        new AwsInfo()
     }
 }
