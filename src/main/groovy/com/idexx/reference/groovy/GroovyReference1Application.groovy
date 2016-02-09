@@ -30,7 +30,7 @@ class GroovyReference1Application {
 
         private def keys = ['ami-id', 'hostname', 'iam/info', 'instance-id', 'instance-type', 'local-hostname',
                             'local-ipv4', 'placement/availability-zone', 'public-hostname', 'public-ipv4',
-                            'reservation-id', 'security-groups', 'instance-identity']
+                            'reservation-id', 'security-groups']
 
         Map<String, Object> info = [:]
 
