@@ -15,5 +15,7 @@ class PetOwner extends BaseEntity {
     String name
     @OneToMany(mappedBy = "petOwner")
     List<Pet> pets = []
+
+
 }
 
